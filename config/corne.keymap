@@ -13,7 +13,7 @@
         FunctionKeyF11: FunctionKeyF11 {
             compatible = "zmk,behavior-mod-morph";
             label = "FUNCTIONKEYF11";
-            bindings = <&pprint PRINTSCREEN P>, <&kp F11>;
+            bindings = <&none>, <&kp F11>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -23,7 +23,7 @@
         FunctionKeyF12: FunctionKeyF12 {
             compatible = "zmk,behavior-mod-morph";
             label = "FUNCTIONKEYF12";
-            bindings = <&backdelete>, <&kp F12>;
+            bindings = <&none>, <&kp F12>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -130,24 +130,28 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        backdelete: backdelete {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BACKDELETE";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
-        };
-
-        pprint: pprint {
+        HMR: HMR {
             compatible = "zmk,behavior-hold-tap";
-            label = "PPRINT";
+            label = "HMR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
+            hold-trigger-key-positions = <10 11 6 7 8 9 35>;
+        };
+
+        HML: HML {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 1 2 3 4 5 24>;
         };
     };
 
@@ -162,10 +166,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&FunctionKeyF1      &FunctionKeyF2  &FunctionKeyF3  &FunctionKeyF4  &FunctionKeyF5  &FunctionKeyF6    &FunctionKeyF7  &FunctionKeyF8  &FunctionKeyF9  &FunctionKeyF10  &FunctionKeyF11  &FunctionKeyF12
-&kp LCTRL           &kp A           &kp S           &kp D           &kp F           &kp G             &kp H           &kp J           &kp K           &kp L            &kp SEMI         &kp SQT
-&mt LSHFT CAPSLOCK  &kp Z           &kp X           &kp C           &kp V           &kp B             &kp N           &kp M           &kp COMMA       &kp DOT          &kp FSLH         &kp ESC
-                                                    &kp LGUI        &mo 1           &kp SPACE         &kp RET         &mo 2           &kp RALT
+&HML F1 TAB          &HML F2 Q  &HML F3 W  &HML F4 E  &HML F5 R  &HML F6 T    &HMR F7 Y  &HMR F8 U  &HMR F9 I  &HMR F10 O  &HMR F11 P  &HMR F12 BACKSPACE
+&kp LCTRL            &kp A      &kp S      &kp D      &kp F      &kp G        &kp H      &kp J      &kp K      &kp L       &kp SEMI    &kp SQT
+&HML LSHFT CAPSLOCK  &kp Z      &kp X      &kp C      &kp V      &kp B        &kp N      &kp M      &kp COMMA  &kp DOT     &kp FSLH    &HMR PRINTSCREEN ESCAPE
+                                           &kp LGUI   &mo 1      &kp SPACE    &kp RET    &mo 2      &kp RALT
             >;
         };
 
@@ -192,7 +196,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB                  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &backdelete
+&kp TAB                  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
 &kp LCTRL                &none            &none        &none     &none       &none          &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH          &kp GRAVE
 &mt LEFT_SHIFT CAPSLOCK  &none            &none        &none     &none       &none          &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp PIPE               &kp TILDE
                                                        &kp LGUI  &trans      &kp SPACE      &kp RET         &trans         &kp RALT
