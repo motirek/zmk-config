@@ -13,7 +13,7 @@
         FunctionKeyF11: FunctionKeyF11 {
             compatible = "zmk,behavior-mod-morph";
             label = "FUNCTIONKEYF11";
-            bindings = <&mt PRINTSCREEN P>, <&kp F11>;
+            bindings = <&pprint PRINTSCREEN P>, <&kp F11>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LGUI)>;
@@ -126,6 +126,17 @@
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
         };
+
+        pprint: pprint {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PPRINT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -169,10 +180,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB            &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &backdelete
-&kp LCTRL          &none            &none        &none     &none       &none          &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH          &kp GRAVE
-&mt CLCK CAPSLOCK  &none            &none        &none     &none       &none          &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp PIPE               &kp TILDE
-                                                 &kp LGUI  &trans      &kp SPACE      &kp RET         &trans         &kp RALT
+&kp TAB                  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &backdelete
+&kp LCTRL                &none            &none        &none     &none       &none          &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH          &kp GRAVE
+&mt LEFT_SHIFT CAPSLOCK  &none            &none        &none     &none       &none          &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp PIPE               &kp TILDE
+                                                       &kp LGUI  &trans      &kp SPACE      &kp RET         &trans         &kp RALT
             >;
         };
     };
