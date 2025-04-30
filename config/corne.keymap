@@ -16,7 +16,8 @@
             bindings = <&pprint PRINTSCREEN P>, <&kp F11>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF12: FunctionKeyF12 {
@@ -25,7 +26,8 @@
             bindings = <&backdelete>, <&kp F12>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF10: FunctionKeyF10 {
@@ -34,7 +36,8 @@
             bindings = <&kp O>, <&kp F10>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF9: FunctionKeyF9 {
@@ -43,7 +46,8 @@
             bindings = <&kp I>, <&kp F9>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF8: FunctionKeyF8 {
@@ -52,16 +56,18 @@
             bindings = <&kp U>, <&kp F8>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF7: FunctionKeyF7 {
             compatible = "zmk,behavior-mod-morph";
             label = "FUNCTIONKEYF7";
-            bindings = <&kp Z>, <&kp F7>;
+            bindings = <&kp Y>, <&kp F7>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF6: FunctionKeyF6 {
@@ -70,7 +76,8 @@
             bindings = <&kp T>, <&kp F6>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF5: FunctionKeyF5 {
@@ -79,7 +86,8 @@
             bindings = <&kp R>, <&kp F5>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF4: FunctionKeyF4 {
@@ -88,7 +96,8 @@
             bindings = <&kp E>, <&kp F4>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF3: FunctionKeyF3 {
@@ -97,7 +106,8 @@
             bindings = <&kp W>, <&kp F3>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF2: FunctionKeyF2 {
@@ -106,7 +116,8 @@
             bindings = <&kp Q>, <&kp F2>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         FunctionKeyF1: FunctionKeyF1 {
@@ -115,7 +126,8 @@
             bindings = <&kp TAB>, <&kp F1>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         backdelete: backdelete {
